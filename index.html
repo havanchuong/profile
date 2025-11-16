@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 700px;
+      max-width: 95%;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      animation: fadeIn 1s ease;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #2575fc;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    p.bio {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+      text-align: center;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #2575fc;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      transform: scale(1.1);
+      background: #6a11cb;
+    }
+
+    .content-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .skills {
+      text-align: left;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+    }
+
+    .skill-item {
+      margin-bottom: 12px;
+    }
+
+    .skill-title {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .skill-title i {
+      color: #2575fc;
+      min-width: 18px;
+      margin-top: 2px;
+    }
+
+    .skill-sub {
+      margin: 4px 0 0 22px;
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    .skill-sub li {
+      margin-bottom: 4px;
+    }
+
+    @media (min-width: 800px) {
+      .card {
+        flex-direction: row;
+        text-align: left;
+      }
+      .header-section, .content-section {
+        flex: 1;
+      }
+      .header-section {
+        align-items: center;
+        justify-content: center;
+        padding-right: 30px;
+      }
+    }
+
+    @media (max-width: 799px) {
+      .card {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+      }
+      .header-section {
+        align-items: center;
+        justify-content: center;
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .avatar {
+        width: 90px;
+        height: 90px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      p.bio {
+        font-size: 12px;
+      }
+      .social a {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+      }
+      .skills {
+        font-size: 12px;
+      }
+      .skill-title i {
+        min-width: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header-section">
+      <img src="./avatar.jpeg" class="avatar" alt="avatar" />
+      <h2>Hà Văn Chương</h2>
+      <p class="bio">Self-taught programmer · Phone Repair Tech · Tech Explorer</p>
+      <div class="social">
+        <a href="https://www.facebook.com/havanchuongvn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://github.com/havanchuong/" title="GitHub"><i class="fab fa-github"></i></a>
+         <a href="https://youtube.com/@havanchuong" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <!-- <a href="mailto:you@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://yourwebsite.com" title="Website"><i class="fas fa-globe"></i></a> -->
+      </div>
+    </div>
+    <div class="content-section">
+      <h3 style="font-size:18px; margin:0 0 10px 0;">Skills</h3>
+      <ul class="skills">
+        <li class="skill-item">
+          <div class="skill-title"><i class="fas fa-code"></i><strong>Programming:</strong></div>
+          <ul class="skill-sub"><li>PHP, Python,C++, JavaScript</li></ul>
+        </li>
+        <li class="skill-item">
+          <div class="skill-title"><i class="fas fa-database"></i><strong>Database:</strong></div>
+          <ul class="skill-sub"><li>MySQL</li></ul>
+        </li>
+        <li class="skill-item">
+          <div class="skill-title"><i class="fas fa-network-wired"></i><strong>🌐 Networking & Deployment:</strong></div>
+          <ul class="skill-sub">
+            <li>Protocols: HTTP/2, WebSockets, DNS, TCP/UDP</li>
+            <li>Servers: Apache, Nginx</li>
+            <li>Security: TLS/SSL configuration, basic network security knowledge</li>
+          </ul>
+        </li>
+        <li class="skill-item">
+          <div class="skill-title"><i class="fas fa-microchip"></i><strong>Hardware:</strong></div>
+          <ul class="skill-sub"><li>Arduino prototyping, micro-soldering, board-level smartphone repair</li></ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
